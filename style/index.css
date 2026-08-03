@@ -1,0 +1,226 @@
+.sura-quick-actions-mount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  margin-right: 8px;
+  min-width: max-content;
+  flex: 0 0 auto;
+}
+
+.sura-quick-actions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.sura-quick-action-btn {
+  padding: 4px 10px;
+  min-height: unset;
+  height: 26px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--jp-brand-color1) !important;
+  background-color: var(--jp-layout-color1) !important;
+  border: 1px solid var(--jp-brand-color1) !important;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sura-quick-action-btn:hover {
+  background-color: var(--jp-layout-color2) !important;
+  border-color: var(--jp-brand-color1) !important;
+}
+
+.sura-quick-btn-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--jp-ui-font-color1);
+}
+
+.sura-quick-action-btn:hover .sura-quick-btn-icon svg {
+  fill: var(--jp-brand-color1);
+}
+
+/* Agent Response Suggestion Buttons */
+.sura-quick-reply-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.sura-quick-reply-btn {
+  display: inline-block;
+  max-width: 100%;
+  padding: 8px 14px;
+  background-color: var(--jp-layout-color1);
+  color: var(--jp-brand-color1);
+  border: 1px solid var(--jp-brand-color1);
+  border-radius: 6px;
+  font-size: var(--jp-ui-font-size1);
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sura-quick-reply-btn:hover {
+  background-color: var(--jp-brand-color3);
+  color: var(--jp-ui-inverse-font-color1);
+  border-color: var(--jp-brand-color3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Agent Settings Expandable Panel */
+#sura-agent-expand-setting-root {
+  position: fixed;
+  top: 42px;
+  left: 300px;
+  z-index: 999999;
+  font-family: var(--jp-ui-font-family);
+}
+
+.sura-agent-expand-panel {
+  background: var(--jp-layout-color1);
+  border: 1px solid var(--jp-border-color1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.sura-agent-expand-panel.is-collapsed {
+  max-height: 40px;
+}
+
+.sura-agent-expand-panel.is-expanded {
+  max-height: 600px;
+}
+
+.sura-expand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--jp-layout-color2);
+  border-bottom: 1px solid var(--jp-border-color1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.sura-expand-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--jp-ui-font-color0);
+}
+
+.sura-header-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--jp-ui-font-color1);
+}
+
+.sura-expand-header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.sura-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sura-icon-btn:hover {
+  background: var(--jp-layout-color3);
+}
+
+.sura-icon-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--jp-ui-font-color1);
+}
+
+.sura-expand-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sura-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sura-switch-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sura-label-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--jp-ui-font-color1);
+}
+
+.sura-sub-form {
+  font-size: 11px;
+  color: var(--jp-ui-font-color2);
+  margin-top: 4px;
+}
+
+.sura-expand-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  border-top: 1px solid var(--jp-border-color1);
+  padding-top: 16px;
+}
+
+.sura-expand-footer button {
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.sura-status-msg {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.sura-status-msg.is-success {
+  color: var(--jp-success-color1);
+}
+
+.sura-status-msg.is-error {
+  color: var(--jp-error-color1);
+}
+
+/* Notebook Toolbar Switch styles */
+.sura-mentor-switch {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}

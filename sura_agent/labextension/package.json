@@ -1,0 +1,38 @@
+{
+  "name": "sura-agent",
+  "version": "0.1.0",
+  "description": "Stateful AI Assistant & Emotional Mentor extension for JupyterLab",
+  "main": "lib/frontend/index.js",
+  "types": "lib/frontend/index.d.ts",
+  "style": "style/index.css",
+  "files": [
+    "lib/**/*.{d.ts,js,js.map}",
+    "style/*"
+  ],
+  "scripts": {
+    "build": "tsc && jupyter labextension build .",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^4.0.0",
+    "@jupyterlab/apputils": "^4.0.0",
+    "@jupyterlab/coreutils": "^6.0.0",
+    "@jupyterlab/docregistry": "^4.0.0",
+    "@jupyterlab/mainmenu": "^4.0.0",
+    "@jupyterlab/notebook": "^4.0.0",
+    "@jupyterlab/services": "^7.0.0",
+    "@jupyterlab/ui-components": "^4.0.0",
+    "@lumino/widgets": "^2.0.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^4.0.0",
+    "@types/react": "^18.0.0",
+    "typescript": "~5.0.0"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "sura_agent/labextension"
+  }
+}

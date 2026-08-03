@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "source": "Seeded from Leong (2016) & Epp (2011) dataset statistics",
+    "description": "Expert baseline probability table mapping 1-5 equal-frequency bins to emotional weights."
+  },
+  "feature_sensitivities": {
+    "backspace_freq": {
+      "bin_1": 0.10, "bin_2": 0.20, "bin_3": 0.45, "bin_4": 0.70, "bin_5": 0.90
+    },
+    "typing_speed": {
+      "bin_1": 0.80, "bin_2": 0.50, "bin_3": 0.30, "bin_4": 0.40, "bin_5": 0.75
+    }
+  }
+}

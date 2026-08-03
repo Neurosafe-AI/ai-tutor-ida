@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sura_agent"
+version = "0.1.0"
+description = "SURA Agent - Stateful programming assistant with real-time emotional mentor support."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "jupyter_server>=2.0.0",
+    "jupyterlab>=4.0.0",
+    "tornado",
+    "ollama",
+    "scipy"
+]
+
+# Registers backend route handlers (/sura-agent/config & /sura-agent/telemetry)
+[project.entry-points."jupyter_server.declarative_extensions"]
+sura_agent = "sura_agent"
+
+# Registers LocalPersona with Jupyter AI Chat Manager
+[project.entry-points."jupyter_ai.personas"]
+LocalAI = "sura_agent.personas:LocalPersona"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sura_agent = ["assets/*", "labextension/**", "labextension/*"]
+
+# Automatically installs the extension config into Jupyter Server's config folder and labextensions
+[tool.setuptools.data-files]
+"etc/jupyter/jupyter_server_config.d" = ["jupyter-config/jupyter_server_config.d/sura_agent.json"]
+"share/jupyter/labextensions/sura-agent" = [
+    "src/sura_agent/labextension/package.json"
+]
